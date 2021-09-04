@@ -1,0 +1,106 @@
+.d-grid {
+  display: grid;
+  grid-gap: 24px;
+  grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+}
+.wrapper {
+  .content {
+    grid-row-gap: 26px;
+    grid-column: 1/-1;
+    section {
+      grid-column: 1/-1;
+      .desc{
+        color: rgb(175,175,175);
+      }
+      .title{
+        a{
+          cursor: pointer;
+          &:hover{
+            text-decoration:underline;
+            color: #fff;
+          }
+        }
+      }
+      .catelog {
+        grid-column: auto;
+        overflow-x: hidden;
+        .cus-card {
+          border: none;
+          padding: 1rem;
+          position: relative;
+          background: rgba(24 24 24);
+          cursor: pointer;
+          transition: all 0.2s ease 0s;
+          border-radius: 7px;
+          .image {
+            position: relative;
+            width: 100%;
+            padding-bottom: 100%;
+            img {
+              position: absolute;
+              width: 100%;
+              height: 100%;
+              top: 0;
+              left: 0;
+              border-radius: 3px;
+            }
+            .btn-play {
+              position: absolute;
+              bottom: 5%;
+              right: 5%;
+              z-index: 9999;
+              opacity: 0;
+              transition: all 0.2s ease 0s;
+              transform: translateY(20px);
+              button {
+                width: 48px;
+                height: 48px;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                background: rgb(29, 185, 84);
+                color: white;
+                border-radius: 50%;
+                border: none;
+                svg {
+                  width: 30px !important;
+                  height: 30px !important;
+                }
+              }
+            }
+            &:hover{
+              .btn-play {
+                opacity: 1;
+                transform: translateY(0);
+              }
+            }
+          }
+          .info {
+            margin-top: 1rem;
+            p {
+              -webkit-line-clamp: 2;
+              -webkit-box-orient: vertical;
+              display: -webkit-box;
+              text-overflow: ellipsis;
+              white-space: normal;
+              overflow: hidden;
+              margin: 0;
+              padding: 0;
+            }
+            .name-card{
+              font-size: 17px;
+              font-weight: bold;
+            }
+            .desc{
+              font-size: 13.5px;
+              margin-top:10px;
+            }
+          }
+          &:hover {
+            background: rgb(40, 40, 40);
+          }
+        }
+      }
+    }
+  }
+}

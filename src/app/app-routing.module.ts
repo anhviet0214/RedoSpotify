@@ -1,10 +1,29 @@
+import { HomePageModule } from './home-page/home-page.module';
 import { NgModule } from '@angular/core';
-import { RouterModule, Routes } from '@angular/router';
+import { PreloadAllModules, RouterModule, Routes } from '@angular/router';
 
-const routes: Routes = [];
+const routes: Routes = [
+  {
+    path:'home',
+    loadChildren: ()=> import('./home-page/home-page.module').then(g=>g.HomePageModule)
+  },
+  {
+    path:'search',
+    loadChildren: ()=> import('./home-page/home-page.module').then(g=>g.HomePageModule)
+  },
+  {
+    path:'playlist',
+    loadChildren: ()=> import('./home-page/home-page.module').then(g=>g.HomePageModule)
+  },
+  {
+    path:'',
+    redirectTo:'home',
+    pathMatch:'full'
+  }
+];
 
 @NgModule({
-  imports: [RouterModule.forRoot(routes)],
+  imports: [RouterModule.forRoot(routes,{preloadingStrategy:PreloadAllModules})],
   exports: [RouterModule]
 })
 export class AppRoutingModule { }

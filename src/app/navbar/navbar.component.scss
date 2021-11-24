@@ -9,7 +9,7 @@
     position: fixed;
     left: 0;
     top: 0;
-    width: 280px;
+    width: 250px;
     height: 100%;
     padding: 25px 0;
     z-index: 1000;
@@ -213,31 +213,40 @@
             height: 32px;
             margin: 0 5px;
         }
-        .login {
+        .user {
             display: flex;
-            align-items: center;
             justify-content: space-between;
+            font-size:12px;
             button {
                 transition: 0.3s ease 0s;
-                margin: 0 10px;
+                margin:  10px;
+                background-color: #000;
+                padding: 5px;
+                color: #fff;
+                border: none;
+                font-weight: bold;
+                border-radius:99px;
+                  a {
+                    margin-right: 10px;
+                    color: white;
+                    
+                  }
+                
                 &:hover {
                     transform: scale(1.1);
                 }
-                &:first-child {
-                    background-color: transparent;
-                    padding: 8px 34px;
-                    border: 0;
-                    color: #fff;
-                    font-weight: bold;
-                }
-                &:last-child {
-                    padding: 8px 34px;
-                    background-color: #fff;
-                    border-radius: 50px;
-                    color: black;
-                    border: 0;
-                    font-weight: bold;
-                }
+            }
+            .img1 {
+              height:25px;
+              width:25px; 
+              text-align: left;
+              border-radius:50%;
+              margin-right: 10px;
+              margin-left:5px;
+            }
+            .img2{
+          
+              margin-left: 3px;
             }
         }
     }
@@ -265,4 +274,72 @@
         }
     }
 
+}
+
+.footer {
+  background-color: black;
+  color: white;
+  height: 10%;
+  width: 100%;
+  text-align: center;
+  padding: 15px;
+  position:fixed;
+  z-index: 9999;
+  bottom: 0;
+  .left {
+    position: relative;
+    .image {
+      position: relative;
+      width: 12%;
+      padding-bottom: 12%;
+      margin-right: 10px;
+
+      img {
+        width: 100%;
+        position: absolute;
+        height: 100%;
+        top: 0;
+        left: 0;
+        border-radius: 2px;
+        box-shadow: 0px 0px 10px 1px #767676;
+      }
+    }
+    .info {
+      text-align: left;
+    }
+  }
+  input[type="range"] {
+    outline: none;
+    height: 3px;
+    border-radius: 10px;
+  }
+  button{
+    border:none;
+    background: transparent  ;
+    color: rgba(255, 255, 255, 0.815);
+    border-radius:50%;
+    transition: all 0.1s ease 0s;
+    &:hover{
+      color: white;
+    }
+  }
+  .middle {
+    #btn-play{
+      background: white;
+      color: black;
+      width:30px;
+      height: 30px;
+      &:hover{
+        transform: scale(1.05);
+      }
+    }
+    span{
+      color: #ddd;
+      font-size: 12px;
+    }
+    input[type="range"] {
+      width: 70%;
+      margin: 5px 2px;
+    }
+  }
 }
